@@ -1,52 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portofolio - Selemani</title>
-  <link rel="stylesheet" href="css/contact.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Project 2 - Selemani</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
 </head>
 
 <body>
   <header>
-    <h1>Contact</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Start</a></li>
-        <li><a href="cv.html">Curriculum Vitae (CV)</a></li>
-        <li><a href="ervaring.html">Ervaring</a></li>
-        <li><a href="hobby.html">Hobby's/Interesses</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"><i class="bi bi-amd"> Selemani</i></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Start</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="portfolioDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Portfolio
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="portfolioDropdown">
+                <li><a class="dropdown-item" href="cv.html">Curriculum Vitae (CV)</a></li>
+                <li><a class="dropdown-item" href="ervaring.html">Ervaring</a></li>
+                <li><a class="dropdown-item" href="hobby.html">Hobby's/Interesses</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
   </header>
-  <main>
-    <h2>Contacteer mij</h2>
-    <form action="#" method="POST">
-      <div class="input-group">
-        <label for="naam">Naam:</label>
-        <input type="text" id="naam" name="naam" required />
-      </div>
-      <div class="input-group">
-        <label for="email">E-mailadres:</label>
-        <input type="email" id="email" name="email" required />
-      </div>
-      <div class="input-group">
-        <label for="onderwerp">Onderwerp:</label>
-        <input type="text" id="onderwerp" name="onderwerp" required />
-      </div>
-      <div class="input-group">
-        <label for="vraag">Uw vraag:</label>
-        <textarea id="vraag" name="vraag" required></textarea>
-      </div>
-      <input type="submit" value="Verstuur" />
-    </form>
-  </main>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
+  <main class="container my-4">
+    <h1>Contacteer Mij</h1>
+    <p>Vul het formulier in om contact met mij op te nemen. Je kan me ook vinden op LinkedIn en Discord.</p>
+
+    <section class="mb-4">
+      <h2>Contactgegevens</h2>
+      <ul>
+        <li>Naam: Selemani Minani</li>
+        <li>Studierichting: TTI GPR d1.1</li>
+        <li>Adres: Hemelrijkstraat 39, bus 1</li>
+        <li>stad: Beerse, 2340</li>
+        <li>Email: <a href="mailto:r1035246@student.thomasmore.be">r1035246@student.thomasmore.be</a></li>
+        <li>Telefoon: +32 471258873</li>
+        <li>Discord: selemani0020</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Contactformulier</h2>
+      <form action="https://tm-statweb.be/forms.php" method="post" class="needs-validation" novalidate>
+        <div class="mb-3">
+          <label for="naam" class="form-label">Naam en Voornaam</label>
+          <input type="text" class="form-control" id="naam" name="naam" required>
+          <div class="invalid-feedback">Vul alstublieft je naam en voornaam in.</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">E-mailadres</label>
+          <input type="email" class="form-control" id="email" name="email" required>
+          <div class="invalid-feedback">Voer een geldig e-mailadres in.</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="skills" class="form-label">Interesse in Skills</label>
+          <select class="form-select" id="skills" name="skills" required>
+            <option value="">Selecteer een optie</option>
+            <option value="webdesign">Webdesign</option>
+            <option value="Programmeren">Programmeren</option>
+            <option value="Exploring IT">Exploring IT</option>
+            <option value="database">Database</option>
+          </select>
+          <div class="invalid-feedback">Selecteer een skill van interesse.</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="vraag" class="form-label">Vraag</label>
+          <textarea class="form-control" id="vraag" name="vraag" rows="5" required></textarea>
+          <div class="invalid-feedback">Vul alstublieft je vraag in.</div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Verstuur</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+      <p class="mb-0">&copy; 2024 Selemani Minani</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
